@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color_black: #000000;
+  --color_dark_grey: #323a45;
+  --color_white: #ffffff;
+  --gap: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--color_black);
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--color_white);
+  font-family: 'Karla', sans-serif;
+  padding: 20px;
+}
+
+header {
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--color_dark_grey);
+  display: inline-block;
+}
+
+nav {
+  gap: 20px;
+}
+
+nav a {
+  color: var(--color_dark_grey);
+}
+
+.col_1 {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.image_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.image_box a {
+  width: 100%;
+  height: 100%;
+}
+
+.image_box a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.image_box:hover a::before {
+  opacity: 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box_info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.box_info .top_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box_info .top_info h2 {
+  font-size: 15px;
+}
+
+.box_info p:nth-last-of-type() {
+  display: block;
+}
+
+.col_3 {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+footer {
+  display: grid;
+  grid-template-areas: 'legal contact newsletter social';
+  grid-template-columns: 2fr 1fr 2fr 1fr;
+  margin-top: 60px;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .home_info {
+  grid-area: legal;
+}
+
+footer .contact_info {
+  grid-area: contact;
+}
+
+footer .newsletter_info {
+  grid-area: newsletter;
+}
+
+footer .social_info {
+  grid-area: social;
+}
+
+footer h3 {
+  color: var(--color_black);
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+footer a {
+  font-size: 10px;
+}
+
+footer .social_links {
+  flex-direction: column;
+}
+
+footer .copy_info {
+  font-size: 10px;
+  margin-top: 44px;
+}
