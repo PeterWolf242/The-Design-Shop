@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="./assets/css/global_min.css" />
     <title>The Design Shop</title>
   </head>
-  <body>
+  <body id="#top">
     <header class="d-flex between align-center">
       <h1>The Design Shop</h1>
-      <nav class="d-flex justify-center align-center flex-row">
-        <a href="#">Weekly Recommendations</a>
-        <a href="#">Contact</a>
-        <a href="#">TDB</a>
-      </nav>
+      <div class="menu-container">
+        <div class="btn_mobile">
+          <input
+            type="checkbox"
+            name="mobile_button"
+            id="mobile_button"
+            hidden
+          />
+          <label for="mobile_button" class="mobile_pic">
+            <img src="assets/img/mobile_button.png" alt="Mobiler Menü-Button" />
+          </label>
+          <nav>
+            <a href="#">Weekly Recommendations</a>
+            <a href="#">Contact</a>
+            <a href="#">TDB</a>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
       <section class="col_1">
@@ -83,9 +96,7 @@
             <p>Retrospec</p>
           </article>
         </section>
-      </section>
 
-      <section class="col_3">
         <section class="img_box">
           <div class="image_box">
             <a href="https://amzn.to/2KfP3ee" target="_blank">
@@ -208,9 +219,7 @@
             <p>Corkcicle.</p>
           </article>
         </section>
-      </section>
 
-      <section class="col_3">
         <section class="img_box">
           <div class="image_box">
             <a href="https://amzn.to/2YWPz3N" target="_blank">
@@ -330,9 +339,7 @@
             <p>Blue Bottle Company</p>
           </article>
         </section>
-      </section>
 
-      <section class="col_3">
         <section class="img_box">
           <div class="image_box">
             <a href="https://amzn.to/2UFjEWp" target="_blank">
@@ -448,9 +455,7 @@
             <p>Good Fucking Design Advice</p>
           </article>
         </section>
-      </section>
 
-      <section class="col_3">
         <section class="img_box">
           <div class="image_box">
             <a href="https://amzn.to/2D3yZWX" target="_blank">
@@ -601,5 +606,11 @@
       </section>
       <p class="copy_info">&copy; 2019 The Design Shop • The Design Blog</p>
     </footer>
+
+    <div class="back_to_top">
+      <a href="#top">
+        <img src="./assets/img/btn_top.png" alt="Button to Top" />
+      </a>
+    </div>
   </body>
 </html>

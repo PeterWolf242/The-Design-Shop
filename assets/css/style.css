@@ -27,6 +27,10 @@ a:visited {
   cursor: pointer;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color_white);
   font-family: 'Karla', sans-serif;
@@ -46,7 +50,7 @@ header h1 {
 }
 
 nav {
-  gap: 20px;
+  position: relative;
 }
 
 nav a {
@@ -169,4 +173,94 @@ footer .social_links {
 footer .copy_info {
   font-size: 10px;
   margin-top: 44px;
+}
+
+.back_to_top {
+  position: fixed;
+  bottom: 1rem;
+  right: 10px;
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+
+#mobil_button,
+.mobile_pic {
+  position: relative;
+  width: 30px;
+  height: 24px;
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  #mobil_button {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  nav a {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .col_3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col_3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col_3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  nav {
+    position: fixed;
+    transform: translateX(100%);
+    right: 0;
+    top: 80px;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 5;
+    padding: 10px 5px;
+    text-align: center;
+    background-color: var(--color_white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px 0 0 20px;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  nav a {
+    font-size: 22px;
+  }
+
+  .mobile_pic {
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile_button:checked ~ nav {
+    /* width: 350px; */
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  }
 }
