@@ -257,7 +257,6 @@ footer .copy_info {
   }
 
   #mobile_button:checked ~ nav {
-    /* width: 350px; */
     display: flex;
     transform: translateX(0);
     opacity: 1;
